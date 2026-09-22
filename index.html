@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>RAW GRAVITY // Vanguard Bio-Synthetics</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+  tailwind.config = {
+    darkMode: "class",
+    theme: { extend: { colors: {
+      brand: { cyan: "#00e5ff", "cyan-dim": "#009bb3", "cyan-glow": "rgba(0, 229, 255, 0.15)" },
+      surface: { base: "#09090b", card: "#121216", elevated: "#18181d", highlight: "#22222a", border: "#26262e" }
+    } } }
+  };
+</script>
+<style>
+  html, body { margin:0; padding:0; height:100%; overflow-x:hidden; font-family:'SF Compact Display', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif; background-color:#212121; }
+  ::-webkit-scrollbar { display:none; }
+  .text-glow-cyan { text-shadow: 0 0 25px rgba(0, 229, 255, 0.45); }
+  .box-glow-cyan { box-shadow: 0 0 30px -5px rgba(0, 229, 255, 0.4); }
+  a { color:#00e5ff; text-decoration:none; }
+  a:hover { color:#33ebff; }
+</style>
+</helmet>
+<div class="bg-[#09090b] text-[#e5e1e4] antialiased selection:bg-[#00e5ff] selection:text-black min-h-screen flex flex-col justify-between relative overflow-y-auto lg:overflow-hidden" style="background-color: rgb(33, 33, 33);">
+<div class="pointer-events-none absolute top-[-15%] left-[45%] -translate-x-1/2 w-[720px] h-[720px] bg-[#00e5ff]/[0.05] rounded-full blur-[160px] -z-10"></div>
+<div class="pointer-events-none absolute bottom-[10%] right-[-10%] w-[550px] h-[550px] bg-[#00e5ff]/[0.035] rounded-full blur-[180px] -z-10"></div>
+<div class="hidden lg:block pointer-events-none absolute top-0 bottom-0 right-0 z-0" style="{{ heroLayerStyle }}"><img src="uploads/hero.png" alt="Raw Gravity product range" class="select-none h-screen w-auto max-w-none block" style="-webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.5) 22%, #000 42%); mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.5) 22%, #000 42%);"></div>
+
+<div class="lg:hidden pointer-events-none absolute inset-0 z-0 overflow-hidden"><img src="uploads/hero.png" alt="Raw Gravity product range" class="absolute left-1/2 top-[8%] select-none max-w-none" style="{{ mobileImgStyle }}"></div>
+
+<header class="relative w-full z-40 pt-7 pb-5 lg:pt-[44px] lg:pb-[56px] flex-shrink-0 bg-transparent">
+<div class="max-w-[1440px] mx-auto px-6 lg:px-12 flex items-center justify-between">
+<div class="flex items-center"><img src="assets/logo.png" alt="Raw Gravity" class="h-5 w-auto object-contain" style="display: block;"></div>
+</div>
+</header>
+
+<main class="relative z-10 w-full flex-1 flex flex-col justify-start lg:justify-center max-w-[1440px] mx-auto px-6 lg:px-12 py-0 lg:py-4 relative">
+<div class="flex-1 lg:flex-none grid grid-cols-1 lg:grid-cols-12 gap-0 lg:gap-12 items-stretch lg:items-center">
+<div class="lg:col-span-6 flex flex-col items-start z-10 h-full lg:h-auto">
+<div class="flex items-center gap-3 mb-[22px] w-full max-w-xl">
+<div class="flex items-center gap-3.5 rounded-sm h-[28px] w-[470px] max-w-full min-w-0 pl-3.5 pr-4" style="background-color: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.12); backdrop-filter: blur(18px) saturate(140%); -webkit-backdrop-filter: blur(18px) saturate(140%);"><span class="w-[5px] h-[5px] rounded-full flex-shrink-0" style="background-color: #00e5ff; box-shadow: 0 0 8px rgba(0, 229, 255, 0.8);"></span><span class="text-[12px] tracking-[0.14em] uppercase font-semibold text-white whitespace-nowrap">STOREFRONT LOADING...</span><span class="relative flex-1 min-w-0 h-px" style="background-color: rgba(255, 255, 255, 0.12);"><span class="absolute left-0 top-0 h-px block" style="width: 62%; background-color: #00e5ff; box-shadow: 0 0 10px rgba(0, 229, 255, 0.6);"></span></span></div>
+</div>
+<div class="w-full flex-1 lg:flex-none flex flex-col items-start lg:contents"><h1 class="font-black text-[39px] sm:text-[54px] lg:text-[76px] xl:text-[85px] uppercase tracking-[-0.03em] text-white leading-[0.95] mb-[16px]">ROOTED IN<br>EARTH.<br>
+<span class="text-white">REACHING<br>BEYOND.</span></h1>
+<p class="text-[15px] leading-[1.35] text-[#bac9cc] max-w-[500px] mb-[28px] font-normal">Functional formulas for energy, focus and everyday performance. Join the list for first access to new products, limited drops and upcoming collaborations.</p>
+<div class="w-full max-w-xl mb-0 lg:mb-3 mt-auto lg:mt-0">
+<form class="flex flex-col sm:flex-row gap-2" id="vip-form" onSubmit="{{ onSubmit }}"><div class="relative flex-1 flex items-center rounded-sm" style="background-color: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.12); backdrop-filter: blur(18px) saturate(140%); -webkit-backdrop-filter: blur(18px) saturate(140%);"><span class="material-symbols-outlined absolute left-3.5 text-[#bac9cc] text-[20px]">mail</span><input class="w-full h-11 bg-transparent pl-11 pr-3 text-[12px] tracking-[0.14em] text-white uppercase placeholder:text-[#bac9cc] focus:outline-none focus:ring-0 border-none font-semibold" id="vip-email" placeholder="ENTER YOUR EMAIL" required type="email"></div><button class="h-11 px-5 bg-[#00e5ff] hover:bg-[#33ebff] text-black font-bold text-[14px] tracking-[0.04em] uppercase transition-all duration-200 flex items-center justify-center gap-2 flex-shrink-0 box-glow-cyan active:scale-[0.98] rounded-sm" id="vip-submit-btn" type="submit"><span>UNLOCK MY BONUSES</span><span class="material-symbols-outlined text-[18px]">lock_open</span></button></form>
+<div class="hidden mt-2 text-[12px] tracking-[0.14em] font-semibold text-[#00e5ff] items-center gap-1.5" id="form-success-msg">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span>CREDENTIAL VERIFIED. ENCRYPTED ACCESS KEY GENERATED. ALLOCATION RESERVED.</span>
+</div>
+</div>
+</div>
+</div>
+<div class="hidden lg:block lg:col-span-6 relative lg:h-auto lg:self-stretch"><div class="absolute inset-0 flex items-center justify-center pointer-events-none"><div class="absolute w-[550px] h-[550px] max-w-[90%] max-h-[90%] bg-[#00e5ff]/[0.08] rounded-full blur-[100px] -z-10"></div><img src="uploads/hero.png" alt="Raw Gravity product range" class="select-none w-auto h-auto max-w-full max-h-full object-contain lg:hidden" style="-webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.5) 22%, #000 42%); mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.5) 22%, #000 42%);"></div></div>
+</div>
+</main>
+
+<section class="relative z-10 w-full bg-transparent pt-4 lg:pt-3 pb-6 lg:pb-8 px-6 lg:px-12 flex-shrink-0">
+<div class="max-w-[1440px] mx-auto flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-x-8 gap-y-3 px-4 sm:px-7 py-2.5 sm:py-4 rounded-xl" style="border: 1px solid rgba(255, 255, 255, 0.12); background-color: rgba(255, 255, 255, 0.05); backdrop-filter: blur(18px) saturate(140%); -webkit-backdrop-filter: blur(18px) saturate(140%);">
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 sm:gap-8 sm:justify-between w-full sm:w-[547px] sm:flex-none lg:w-[548px] min-w-0"><div class="text-[12px] uppercase tracking-[0.14em] font-semibold text-[#00e5ff] flex-shrink-0 text-center sm:text-left w-full sm:w-auto -ml-0 sm:-ml-7 lg:ml-0" id="ea-label">OFFICIAL LAUNCH IN:</div><div class="flex items-center gap-1.5 sm:gap-2 w-full sm:w-auto sm:mr-[50px]"><div class="flex-1 sm:flex-none w-auto sm:w-[62px] h-[44px] sm:h-[60px] flex flex-col items-center justify-center rounded-sm shadow-md" style="background-color: rgb(18, 18, 23); border: 1px solid rgba(0, 229, 255, 0.28);"><span class="font-mono font-bold text-[22px] sm:text-[32px] text-white leading-none" id="timer-days">14</span><span class="text-[10px] text-[#bac9cc] uppercase tracking-[0.14em] font-semibold mt-0.5">DAYS</span></div><span class="text-[#00e5ff] font-bold text-[12px] sm:text-[14px] leading-none mb-3 sm:mb-4">:</span><div class="flex-1 sm:flex-none w-auto sm:w-[62px] h-[44px] sm:h-[60px] flex flex-col items-center justify-center rounded-sm shadow-md" style="background-color: rgb(18, 18, 23); border: 1px solid rgba(0, 229, 255, 0.28);"><span class="font-mono font-bold text-[22px] sm:text-[32px] text-white leading-none" id="timer-hours">08</span><span class="text-[10px] text-[#bac9cc] uppercase tracking-[0.14em] font-semibold mt-0.5">HRS</span></div><span class="text-[#00e5ff] font-bold text-[12px] sm:text-[14px] leading-none mb-3 sm:mb-4">:</span><div class="flex-1 sm:flex-none w-auto sm:w-[62px] h-[44px] sm:h-[60px] flex flex-col items-center justify-center rounded-sm shadow-md" style="background-color: rgb(18, 18, 23); border: 1px solid rgba(0, 229, 255, 0.28);"><span class="font-mono font-bold text-[22px] sm:text-[32px] text-white leading-none" id="timer-minutes">00</span><span class="text-[10px] text-[#bac9cc] uppercase tracking-[0.14em] font-semibold mt-0.5">MIN</span></div><span class="text-[#00e5ff] font-bold text-[12px] sm:text-[14px] leading-none mb-3 sm:mb-4">:</span><div class="flex-1 sm:flex-none w-auto sm:w-[62px] h-[44px] sm:h-[60px] flex flex-col items-center justify-center rounded-sm shadow-md" style="background-color: rgba(0, 229, 255, 0.08); border: 1px solid rgba(0, 229, 255, 0.55);"><span class="font-mono font-bold text-[22px] sm:text-[32px] text-[#00e5ff] leading-none" id="timer-seconds">37</span><span class="text-[10px] text-[#bac9cc] uppercase tracking-[0.14em] font-semibold mt-0.5">SEC</span></div></div>
+</div><div class="hidden lg:block w-px self-stretch my-2 flex-shrink-0" style="background-color: #00e5ff;"></div>
+<div class="hidden lg:block max-w-[380px] py-0.5"><div class="font-bold text-[14px] text-white tracking-[0.04em] uppercase">LAUNCH SPECIAL OFFER</div><p class="hidden lg:block text-[15px] text-[#bac9cc] mt-1 leading-[1.5]">Subscribe to get exclusive bonuses and gifts with our official launch.</p></div>
+</div>
+</section>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;imageOffsetX&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0,&quot;min&quot;:-400,&quot;max&quot;:400,&quot;step&quot;:5,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Product image (desktop)&quot;},&quot;imageOffsetY&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0,&quot;min&quot;:-400,&quot;max&quot;:400,&quot;step&quot;:5,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Product image (desktop)&quot;},&quot;imageScale&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:1,&quot;min&quot;:0.5,&quot;max&quot;:2,&quot;step&quot;:0.05,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Product image (desktop)&quot;},&quot;mobileImageOffsetX&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:-60,&quot;min&quot;:-300,&quot;max&quot;:300,&quot;step&quot;:5,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Product image (mobile)&quot;},&quot;mobileImageOffsetY&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:230,&quot;min&quot;:-300,&quot;max&quot;:300,&quot;step&quot;:5,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Product image (mobile)&quot;},&quot;mobileImageWidth&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:150,&quot;min&quot;:100,&quot;max&quot;:320,&quot;step&quot;:5,&quot;unit&quot;:&quot;%&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Product image (mobile)&quot;},&quot;mobileImageOpacity&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:1,&quot;min&quot;:0.1,&quot;max&quot;:1,&quot;step&quot;:0.05,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Product image (mobile)&quot;}}">
+class Component extends DCLogic {
+  alignLabel = () => {
+    const h1 = document.querySelector('h1'), lbl = document.getElementById('ea-label');
+    if (!h1 || !lbl) return;
+    lbl.style.marginLeft = '';
+    if (window.innerWidth < 1024) return;
+    lbl.style.marginLeft = '0px';
+    const d = h1.getBoundingClientRect().left - lbl.getBoundingClientRect().left;
+    lbl.style.marginLeft = (d + 5) + 'px';
+  };
+  componentDidMount() {
+    requestAnimationFrame(this.alignLabel);
+    window.addEventListener('resize', this.alignLabel);
+    const target = Date.now() + (21 * 86400000);
+    const set = (id, v) => { const el = document.getElementById(id); if (el) el.textContent = String(v).padStart(2, '0'); };
+    const update = () => {
+      const diff = target - Date.now();
+      if (diff <= 0) return;
+      set('timer-days', Math.floor(diff / 86400000));
+      set('timer-hours', Math.floor((diff % 86400000) / 3600000));
+      set('timer-minutes', Math.floor((diff % 3600000) / 60000));
+      set('timer-seconds', Math.floor((diff % 60000) / 1000));
+    };
+    this._t = setInterval(update, 1000);
+    update();
+  }
+  componentWillUnmount() { clearInterval(this._t); }
+  renderVals() {
+    const x = this.props.imageOffsetX ?? 0, y = this.props.imageOffsetY ?? 0, s = this.props.imageScale ?? 1;
+    return {
+      mobileImgStyle: {
+        WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, #000 20%, #000 82%, transparent 88%)',
+        maskImage: 'linear-gradient(to bottom, transparent 0%, #000 20%, #000 82%, transparent 88%)',
+        width: (this.props.mobileImageWidth ?? 150) + '%',
+        opacity: this.props.mobileImageOpacity ?? 1,
+        transform: 'translate(calc(-50% + ' + (this.props.mobileImageOffsetX ?? -62) + 'px), ' + (this.props.mobileImageOffsetY ?? 230) + 'px)'
+      },
+      heroLayerStyle: { transform: 'translate(' + x + 'px, ' + y + 'px) scale(' + s + ')', transformOrigin: 'right center' },
+      onSubmit: (e) => {
+        e.preventDefault();
+        const email = document.getElementById('vip-email');
+        const btn = document.getElementById('vip-submit-btn');
+        const msg = document.getElementById('form-success-msg');
+        if (!email || !email.value) return;
+        btn.disabled = true;
+        btn.innerHTML = '<span class="material-symbols-outlined animate-spin text-[18px]">sync</span> ENCRYPTING...';
+        setTimeout(() => {
+          btn.innerHTML = '<span>ALLOCATION SECURED</span><span class="material-symbols-outlined text-[18px]">verified</span>';
+          btn.classList.remove('bg-[#00e5ff]');
+          btn.classList.add('bg-white');
+          email.disabled = true;
+          msg.classList.remove('hidden');
+          msg.classList.add('flex');
+        }, 600);
+      }
+    };
+  }
+}
+</script>
+</body>
+</html>
