@@ -114,22 +114,52 @@ class Component extends DCLogic {
         transform: 'translate(calc(-50% + ' + (this.props.mobileImageOffsetX ?? -62) + 'px), ' + (this.props.mobileImageOffsetY ?? 230) + 'px)'
       },
       heroLayerStyle: { transform: 'translate(' + x + 'px, ' + y + 'px) scale(' + s + ')', transformOrigin: 'right center' },
-      onSubmit: (e) => {
+      onSubmit: async (e) => {
         e.preventDefault();
+
         const email = document.getElementById('vip-email');
         const btn = document.getElementById('vip-submit-btn');
         const msg = document.getElementById('form-success-msg');
+
         if (!email || !email.value) return;
+
         btn.disabled = true;
         btn.innerHTML = '<span class="material-symbols-outlined animate-spin text-[18px]">sync</span> ENCRYPTING...';
-        setTimeout(() => {
+
+        try {
+          const response = await fetch('/api/subscribe', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              email: email.value
+            })
+          });
+
+          const result = await response.json();
+
+          if (!response.ok || !result.success) {
+            throw new Error(result.error || 'Subscription failed');
+          }
+
           btn.innerHTML = '<span>ALLOCATION SECURED</span><span class="material-symbols-outlined text-[18px]">verified</span>';
           btn.classList.remove('bg-[#00e5ff]');
           btn.classList.add('bg-white');
+
           email.disabled = true;
+
           msg.classList.remove('hidden');
           msg.classList.add('flex');
-        }, 600);
+
+        } catch (error) {
+          console.error('Subscription error:', error);
+
+          btn.disabled = false;
+          btn.innerHTML = '<span>UNLOCK MY BONUSES</span><span class="material-symbols-outlined text-[18px]">lock_open</span>';
+
+          alert('Something went wrong. Please try again.');
+        }
       }
     };
   }
